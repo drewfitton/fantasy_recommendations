@@ -1,0 +1,123 @@
+/* App-level layout classes. Every value comes from Nocturne tokens — see
+   src/styles/nocturne/readme.md. This file adds structure only; it does not
+   restyle any Nocturne component. */
+
+.app-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.page-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-3);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-switcher {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.user-switcher .input {
+  width: 180px;
+}
+
+.avatar {
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.avatar-fallback {
+  color: var(--color-neutral-500);
+}
+
+.team-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.state-error {
+  border: 1px solid var(--color-accent);
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-end;
+}
+
+.filter-bar .field {
+  min-width: 160px;
+}
+
+.player-name-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.availability-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.matchup-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.matchup-pair .card-title {
+  overflow-wrap: anywhere;
+}
+
+.matchup-score {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 20px;
+  text-align: right;
+}
+
+.matchup-score-left {
+  text-align: left;
+}
+
+.matchup-vs {
+  color: var(--color-neutral-500);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.starter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
